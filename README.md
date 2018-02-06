@@ -1,17 +1,17 @@
-char-rnn-tensorflow
+GUI-char-rnn-tensorflow
 ===
 
-[![Join the chat at https://gitter.im/char-rnn-tensorflow/Lobby](https://badges.gitter.im/char-rnn-tensorflow/Lobby.svg)](https://gitter.im/char-rnn-tensorflow/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Coverage Status](https://coveralls.io/repos/github/sherjilozair/char-rnn-tensorflow/badge.svg)](https://coveralls.io/github/sherjilozair/char-rnn-tensorflow)
-[![Build Status](https://travis-ci.org/sherjilozair/char-rnn-tensorflow.svg?branch=master)](https://travis-ci.org/sherjilozair/char-rnn-tensorflow)
 
-Multi-layer Recurrent Neural Networks (LSTM, RNN) for character-level language models in Python using Tensorflow.
+GUI enabled Multi-layer Recurrent Neural Networks (LSTM, RNN) for character-level language models in Python using Tensorflow.
 
+Fork of sherjilozair's [char-rnn-tensorflow](https://github.com/sherjilozair/char-rnn-tensorflow).
 Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn).
 
 ## Requirements
 - [Tensorflow 1.0](http://www.tensorflow.org)
+- Gooey
 
+# Everything beneath here is under review:
 ## Basic Usage
 To train with default parameters on the tinyshakespeare corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
 
