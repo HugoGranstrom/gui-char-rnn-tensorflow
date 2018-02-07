@@ -18,6 +18,7 @@ def main():
     parser = GooeyParser()
     parser.add_argument('--data_dir', type=str, default='data/tinyshakespeare',
                         help='data directory containing input.txt', widget='DirChooser')
+    parser.add_argument('--input_file', widget='FileChooser', help='the file to train the RNN on')
     parser.add_argument('--save_dir', type=str, default='save',
                         help='directory to store checkpointed models', widget='DirChooser')
     parser.add_argument('--log_dir', type=str, default='logs',
@@ -59,7 +60,7 @@ def main():
 
 
 def train(args):
-    data_loader = TextLoader(args.data_dir, args.batch_size, args.seq_length)
+    data_loader = TextLoader(args.data_dir, args.batch_size, args.seq_length, args.input_file)
     args.vocab_size = data_loader.vocab_size
 
     # check compatibility if training is continued from previously saved model
