@@ -14,7 +14,7 @@ from gooey import Gooey
 @Gooey
 def main():
     parser = argparse.ArgumentParser(
-                       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = GooeyParser(
     parser.add_argument('--save_dir', type=str, default='save',
                         help='model directory to store checkpointed models')
     parser.add_argument('-n', type=int, default=500,
