@@ -17,11 +17,11 @@ from gooey import GooeyParser
 def main():
     parser = GooeyParser()
     parser.add_argument('--data_dir', type=str, default='data/tinyshakespeare',
-                        help='data directory containing input.txt')
+                        help='data directory containing input.txt', widget='DirChooser')
     parser.add_argument('--save_dir', type=str, default='save',
-                        help='directory to store checkpointed models')
+                        help='directory to store checkpointed models', widget='DirChooser')
     parser.add_argument('--log_dir', type=str, default='logs',
-                        help='directory to store tensorboard logs')
+                        help='directory to store tensorboard logs', widget='DirChooser')
     parser.add_argument('--rnn_size', type=int, default=128,
                         help='size of RNN hidden state')
     parser.add_argument('--num_layers', type=int, default=2,
