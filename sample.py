@@ -30,9 +30,9 @@ def main():
 
 
 def sample(args):
-    with open(args.save_dir.join('config.pkl'), 'rb') as f:
+    with open(os.path.join(args.save_dir, 'config.pkl'), 'rb') as f:
         saved_args = cPickle.load(f)
-    with open(args.save_dir.join('chars_vocab.pkl'), 'rb') as f:
+    with open(os.path.join(args.save_dir, 'chars_vocab.pkl'), 'rb') as f:
         chars, vocab = cPickle.load(f)
     model = Model(saved_args, training=False)
     with tf.Session() as sess:
