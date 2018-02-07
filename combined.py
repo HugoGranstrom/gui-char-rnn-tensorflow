@@ -75,17 +75,13 @@ def main():
 
     
     args = parser.parse_args()
-    #train_args = train_parser.parse_args()
-    #sample_args = sample_parser.parse_args()
-    print(args)
+
     if args.command == 'sample':
         sample(args)
     elif args.command == 'train':
         train(args)
     else:
         print("hopplöst")
-    print(args)
-    #train(args)
 
 
 def train(args):
