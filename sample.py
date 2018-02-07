@@ -10,10 +10,11 @@ from model import Model
 from six import text_type
 
 from gooey import Gooey
+from gooey import GooeyParser
 
 @Gooey
 def main():
-    parser = GooeyParser(
+    parser = GooeyParser()
     parser.add_argument('--save_dir', type=str, default='save',
                         help='model directory to store checkpointed models', widget='DirChooser')
     parser.add_argument('-n', type=int, default=500,

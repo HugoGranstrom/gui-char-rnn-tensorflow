@@ -11,11 +11,11 @@ from model import Model
 
 
 from gooey import Gooey
+from gooey import GooeyParser
 
 @Gooey
 def main():
-    parser = argparse.ArgumentParser(
-                        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = GooeyParser()
     parser.add_argument('--data_dir', type=str, default='data/tinyshakespeare',
                         help='data directory containing input.txt')
     parser.add_argument('--save_dir', type=str, default='save',
