@@ -24,7 +24,7 @@ class Model():
             raise Exception("model type not supported: {}".format(args.model))
 
         cells = []
-        for _ in range(args.num_layers):
+        for _ in range(int(args.num_layers)):
             cell = cell_fn(args.rnn_size)
             if training and (args.output_keep_prob < 1.0 or args.input_keep_prob < 1.0):
                 cell = rnn.DropoutWrapper(cell,
