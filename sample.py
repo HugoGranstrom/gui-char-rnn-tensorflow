@@ -9,7 +9,9 @@ from model import Model
 
 from six import text_type
 
+from gooey import Gooey
 
+@Gooey
 def main():
     parser = argparse.ArgumentParser(
                        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
