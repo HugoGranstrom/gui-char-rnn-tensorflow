@@ -25,9 +25,9 @@ def main():
                         help='directory to store tensorboard logs', widget='DirChooser')
     parser.add_argument('--rnn_size', type=int, default=128,
                         help='size of RNN hidden state')
-    parser.add_argument('--num_layers', type=int, default=2,
+    parser.add_argument('--num_layers', type=int, default=2, choices=[1, 2, 3, 4, 5],
                         help='number of layers in the RNN')
-    parser.add_argument('--model', type=str, default='lstm',
+    parser.add_argument('--model', type=str, default='lstm', choices=['lstm', 'rnn', 'gru', 'nas'],
                         help='rnn, gru, lstm, or nas')
     parser.add_argument('--batch_size', type=int, default=50,
                         help='minibatch size')
@@ -47,7 +47,7 @@ def main():
                         help='probability of keeping weights in the hidden layer')
     parser.add_argument('--input_keep_prob', type=float, default=1.0,
                         help='probability of keeping weights in the input layer')
-    parser.add_argument('--init_from', type=str, default=None,
+    parser.add_argument('--init_from', type=str, default=None, widget='DirChooser',
                         help="""continue training from saved model at this path. Path must contain files saved by previous training process:
                             'config.pkl'        : configuration;
                             'chars_vocab.pkl'   : vocabulary definitions;
