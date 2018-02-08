@@ -128,7 +128,7 @@ def train(args):
         writer.add_graph(sess.graph)
 
         sess.run(tf.global_variables_initializer())
-        saver = tf.train.Saver(tf.global_variables())
+        saver = tf.train.Saver(tf.global_variables(), save_relative_paths=True)
         # restore model
         if args.init_from is not None:
             saver.restore(sess, ckpt.model_checkpoint_path)
@@ -171,7 +171,7 @@ def sample(args):
     model = Model(saved_args, training=False)
     with tf.Session() as sess:
         tf.global_variables_initializer().run()
-        saver = tf.train.Saver(tf.global_variables())
+        saver = tf.train.Saver(tf.global_variables(), save_relative_paths=True)
         ckpt = tf.train.get_checkpoint_state(args.save_dir)
         if ckpt and ckpt.model_checkpoint_path:
             saver.restore(sess, ckpt.model_checkpoint_path)
