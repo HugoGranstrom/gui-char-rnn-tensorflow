@@ -14,7 +14,7 @@ from six import text_type
 from gooey import Gooey
 from gooey import GooeyParser
 
-@Gooey(advanced=True, optional_cols=2)
+@Gooey(advanced=True, optional_cols=2, navigation='TABBED')
 def main():
     parser = GooeyParser()
 
