@@ -9,7 +9,7 @@ Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 
 ## Requirements
 - [Tensorflow 1.0](http://www.tensorflow.org)
-- Gooey
+- [Gooey](https://github.com/chriskiehl/Gooey)
 
 # Everything beneath here is under review:
 ## Basic Usage
