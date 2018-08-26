@@ -13,7 +13,7 @@ Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 
 # Everything beneath here is under review:
 ## Basic Usage
-Starr the program by running ``python main.py``
+Start the program by running ``python main.py``
 
 ## Datasets
 You can use any plain text file as input. For example you could download [The complete Sherlock Holmes](https://sherlock-holm.es/ascii/) as such:
