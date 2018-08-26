@@ -13,9 +13,7 @@ Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 
 # Everything beneath here is under review:
 ## Basic Usage
-To train with default parameters on the tinyshakespeare corpus, run `python train.py`. To access all the parameters use `python train.py --help`.
-
-To sample from a checkpointed model, `python sample.py`.
+Starr the program by running ``python main.py``
 
 ## Datasets
 You can use any plain text file as input. For example you could download [The complete Sherlock Holmes](https://sherlock-holm.es/ascii/) as such:
