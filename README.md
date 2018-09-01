@@ -15,6 +15,16 @@ Inspired from Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn)
 ## Basic Usage
 Start the program by running ``python main.py``
 
+## Recommended starting parameters
+``num_layers``: 2
+``rnn_size``: 128
+``model``: lstm
+``batch_size``: 50 
+``sequence_length``: 50
+``num_epochs``: 50
+``learning_rate``: 0.002
+
+
 ## Datasets
 You can use any plain text file as input. For example you could download [The complete Sherlock Holmes](https://sherlock-holm.es/ascii/) as such:
 
@@ -25,8 +35,6 @@ cd sherlock
 wget https://sherlock-holm.es/stories/plain-text/cnus.txt
 mv cnus.txt input.txt
 ```
-
-Then start train from the top level directory using `python train.py --data_dir=./data/sherlock/`
 
 A quick tip to concatenate many small disparate `.txt` files into one large training file: `ls *.txt | xargs -L 1 cat >> input.txt`
 
